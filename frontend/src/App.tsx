@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/Login';
 import Boards from './pages/Boards';
+import Signup from "./pages/Signup.tsx";
 import BoardDetail from './pages/BoardDetail';
 import './App.css'
 
@@ -19,6 +20,7 @@ function App() {
                       : <Navigate to="/login" replace />
                   }
                 />
+            <Route path="/signup" element={<Signup />} />
 
                 <Route
                   path="/boards/:boardId"
